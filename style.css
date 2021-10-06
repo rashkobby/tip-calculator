@@ -1,0 +1,335 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
+
+
+                /* basic universal styles  */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Space Mono', monospace;
+}
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+                /* general styles  */
+body{ 
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: hsl(185, 41%, 84%);
+    margin: auto;
+    
+}
+
+                /* logo styling  */
+header{
+    margin-top: 50px;
+}
+
+
+                /* styling of the main container for the tip calculator */
+main{
+    width: 720px;
+    height: 360px;
+    margin-top: 60px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: hsl(0, 0%, 100%);
+    place-items: center;
+    border-radius: 15px;
+    box-shadow: rgba(25, 25, 25, 0.04) 0 0 1px 0, rgba(0,0, 0, 0.1) 0 3px 4px 0;
+} 
+
+
+                /* styling for the input and display sections  */
+section{
+    margin: 0 10px;
+    padding: 10px;
+    place-items: center;
+    width: 90%;
+    height: 90%;
+
+}
+
+.tipInput{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 0.4em;
+    
+    
+    
+}
+
+
+.tips{
+    margin: 30px 0;
+
+}
+
+                /* buttons and custom input styling */
+.tipPercent {
+    width: 94px;
+    height: 35px;
+    margin-top: 6px;
+    color: white;
+    background-color: hsl(183, 100%, 15%);
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    
+}
+
+.tipPercent:hover{
+    background-color: hsl(185, 41%, 84%);
+    color: hsl(183, 100%, 15%);
+    transition: ease-in 0.2s;
+}
+
+
+.customTip input{
+    width: 94px;
+    height: 35px;
+    margin-top: 6px;
+    text-align: right;
+    padding: 5px;
+    background-color:hsl(186, 52%, 88%);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    outline-style: none;
+    outline-color: hsl(172, 67%, 45%);
+
+
+}
+
+.customTip input:hover{
+    outline-style: auto;
+    outline-color: hsl(172, 67%, 45%);
+    transition:  0.2s ease-in;
+}
+
+            /* input area styling */
+.bill{
+    display: flex;
+    flex-direction: column;
+    
+    
+    
+}
+
+
+
+label{
+    font-size: 13px;
+}
+
+
+
+.bill input{
+    height: 35px;
+    background-color: hsl(186, 52%, 88%);
+    color: hsl(183, 100%, 15%);
+    background-image: url(./images/icon-dollar.svg);
+    background-position: 7px 7px;
+    background-repeat: no-repeat;
+    border: none;
+    border-radius: 4px;
+    text-align: right;
+    padding: 5px;
+    margin-top: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-family: 'Space Mono', monospace;
+    font-weight: 700;
+    outline-style: none;
+    outline-color: hsl(172, 67%, 45%); 
+    
+}
+
+.bill input:hover{
+    outline-style: auto;
+    outline-color: hsl(172, 67%, 45%);
+    transition: 0.2s ease-in;
+}
+
+input::-webkit-inner-spin-button,
+input::-webkit-outer-spin-button{
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+
+
+.bill-icon input{
+    background-image: url(./images/icon-person.svg);
+    background-position: 7px 7px;
+    background-repeat: no-repeat;
+}
+
+.warning{
+    display: flex;
+    justify-content: space-between;
+    
+
+}
+
+.error{
+    color: red;
+    display: none;
+    
+}
+
+/* colored section styles  */
+.split-view{
+    background-color: hsl(183, 100%, 15%);
+    border-radius: 10px;
+    
+}
+
+
+.space-between{
+    display: flex;
+    justify-content: space-between;
+    margin: 30px 10px;
+    color: hsl(184, 14%, 56%);
+    
+    
+}
+.active{
+    background-color: hsl(172, 67%, 45%);
+    color: hsl(183, 100%, 15%);
+}
+
+
+.space-between h4{
+    color: white;
+    font-weight: 100;
+    font-size: 12px;
+    text-transform: capitalize;
+    margin-top: 8px;
+}
+
+.space-between p {
+    font-size: 12px;
+}
+.space-between h1{
+    font-size: 35px;
+    
+}
+
+
+/* reset button styling  */
+.btn{
+    display: flex;
+    align-self: center;
+    justify-content: center;
+
+}
+
+input:focus{
+    outline-style: auto;
+    outline-color: hsl(172, 67%, 45%);
+}
+
+.btn button{
+    width: 95%;
+    height: 35px;
+    text-transform: uppercase;
+    background-color: hsl(184, 14%, 56%);
+    color: hsl(183, 100%, 15%);
+    border-style: none;
+    border-radius: 4px;
+    margin-top: 50px;
+    cursor: pointer;
+    font-weight: 700;
+    
+    
+
+}
+
+.btn button:hover{
+    background-color: hsl(185, 41%, 84%);
+    color: hsl(183, 100%, 15%);
+    transition: ease-in 0.5s;
+}
+
+
+
+
+@media (max-width: 750px){
+    main{
+        display: flex;
+        flex-direction: column;
+        width: 280px;
+        height: 580px;
+        margin-top: 10px;
+        
+    }
+    
+    section{
+        height: 320px;
+        justify-content: space-around;
+    }
+
+    .tipInput{
+        display: grid;
+        grid-template-columns: 1fr 1fr ;
+        grid-gap: 0.1em;
+        grid-row: 3px;
+        
+        
+        
+        
+    }
+
+    
+
+    .tips{
+        margin: 10px ;
+    
+    }
+
+
+    .split-view{
+        height: 210px;
+        
+        
+    }
+    .space-between{
+        
+        margin-top: 2px;
+    }
+
+    .space-between{
+        
+        margin: 12px 6px;
+        
+        
+        
+    }
+    
+    .btn button{
+        
+        margin-top: 2px;
+    
+    }
+
+    header{
+        margin-top: 10px;
+    }
+
+    .warning{
+        margin-top: 15px;
+    }
+
+    label{
+        font-size: 10px;
+    }
+    
+    
+}
